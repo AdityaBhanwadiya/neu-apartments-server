@@ -9,7 +9,7 @@ import path from 'path';
 dotenv.config();
 
 mongoose
-  .connect(process.env.MONGO)
+  .connect("mongodb+srv://arpanpatel1899:arpanpatel1899@cluster0.hawspx5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
   .then(() => {
     console.log('Connected to MongoDB!');
   })
@@ -26,7 +26,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.listen(3000, () => {
-  console.log('Server is running on port 3000!');
+  console.log('Server is running on port !');
 });
 
 app.use('/api/user', userRouter);
